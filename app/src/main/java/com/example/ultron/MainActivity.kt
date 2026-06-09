@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ULTRONTheme {
                 Column(
-                    modifier = Modifier.fillMaxWidth(), //centering my columns
+                    modifier = Modifier.fillMaxSize(), //centering my columns
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally //centering my columns
 
@@ -46,13 +46,12 @@ class MainActivity : ComponentActivity() {
                     {
                         Text("Add to playlist")
                     }
-
                     ElevatedButton(
-                        onClick = {val intent = Intent(
+                        onClick = { val intent = Intent(
                             this@MainActivity,
                             DetailedView::class.java
                         )
-                        startActivity(intent)})
+                            startActivity(intent)})
 
                     {
                         Text("Detailed View")
@@ -68,4 +67,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
+
 
